@@ -1,0 +1,67 @@
+/* Background with floating hearts */
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    color: white;
+    position: relative;
+}
+
+/* Glowing Text */
+.glow {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+#yes {
+    background-color: #28a745;
+    color: white;
+}
+
+#no {
+    background-color: #dc3545;
+    color: white;
+    position: absolute;
+}
+
+/* Hidden Message */
+.hidden {
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Floating Hearts */
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    bottom: -100px;
+    font-size: 30px;
+    animation: float 6s linear infinite;
+}
